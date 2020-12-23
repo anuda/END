@@ -172,3 +172,74 @@ x1 = 3
 x2 = 12
 for i in range(x1,x2):
 	print(i)
+
+# write a python program to import pandas 
+
+import pandas as pd
+
+# write a python program to import numpy
+
+import numpy as np
+
+# write a python program to copy all elements from one array to another
+
+arr1 = [1, 2, 3, 4, 5];     
+     
+   
+arr2 = [None] * len(arr1);    
+     
+  
+for i in range(0, len(arr1)):    
+    arr2[i] = arr1[i];
+
+# write a python program to print duplicate elements in an array
+
+arr = [1, 2, 3, 4, 2, 7, 8, 8, 3];     
+ 
+for i in range(0, len(arr)):    
+    for j in range(i+1, len(arr)):    
+        if(arr[i] == arr[j]):    
+            print(arr[j]);
+
+
+# write a python program to sort words in alphabetic order
+
+my_str = "this is a sample text"
+words = my_str.split()  
+words.sort()   
+for word in words:  
+   print(word)
+
+# write a python function to check if its a leap year
+
+def leap_year_check(year):
+    if (year % 4) == 0:  
+        if (year % 100) == 0:  
+            if (year % 400) == 0:
+                print("{0} is a leap year".format(year))  
+            else:
+                print("{0} is not a leap year".format(year))  
+        else:
+            print("{0} is a leap year".format(year))  
+    else:
+        print("{0} is not a leap year".format(year))  
+
+# write a python program to calculate number of days between dates
+
+from datetime import date
+f_date = date(2014, 7, 2)
+l_date = date(2014, 7, 11)
+delta = l_date - f_date
+print(delta.days)
+
+# write a python program to write a text to a txt file
+
+text='sample text goes here'
+with open("test.txt",'w',encoding = 'utf-8') as f:
+   f.write(text)
+
+# write a python program to read a txt file into a list
+
+f = open("test.txt",'r',encoding = 'utf-8')
+lines = f.readlines()
+f.close()
